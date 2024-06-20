@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+margin: 0;
+padding: 0;
+}
+
+:root{
+
+--verde-forte: #386641ff;
+--verde-medio: #6a994eff;
+--verde-fraco: #a7c957ff;
+--vermelho: #bc4749ff;
+--font-texto:"Inter", sans-serif;
+--font-titulo: "Oswald", sans-serif;
+
+}
