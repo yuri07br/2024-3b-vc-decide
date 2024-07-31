@@ -7,10 +7,10 @@ padding: 0;
 
 :root{
 
---verde-forte: #386641ff;
---verde-medio: #6a994eff;
---verde-fraco: #a7c957ff;
---vermelho: #bc4749ff;
+--verde-forte: rgb(60, 114, 71);
+--azul-forte: rgba(91, 104, 242, 0.87);
+--verde-fraco: rgb(176, 213, 88);
+--azul-medio: rgba(76, 77, 128, 0.354);
 --font-texto:"Inter", sans-serif;
 --font-titulo: "Oswald", sans-serif;
 
