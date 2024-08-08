@@ -3,97 +3,97 @@ const caixaPerguntas = document.querySelector('.caixa-perguntas');
 const caixaAlternativas = document.querySelector('.caixa-alternativas');
 const caixaResultado = document.querySelector('.caixa-resultado');
 const textoResultado = document.querySelector('.texto-resultado');
+
 const perguntas = [
     {
-        enunciado: "",
-        alternativa: [
+        enunciado: "Enunciado 01",
+        alternativas: [
             {
-            texto:"m autismo, para que suas necesidades sejam atendidas corretamente.",
-            afirmacao:""
+                texto:"alternativa 01",
+                afirmacao: "resultado 01"
             },
             {
-            texto:".",
-            afirmacao:""
+                texto:"alternativa 02",
+                afirmacao: "resultado 02"
+            }   
+        ]
+    },
+    {
+        enunciado: "Enunciado 02",
+        alternativas: [
+            {
+                texto: "alternativa 03",
+                afirmacao: "resultado03"
+            },
+            {
+                texto: "alternativa 04",
+                afirmacao: "resultado 04"
             }
         ]
     },
     {
-        enunciado: "Ryan completou 12 anos e sua mãe percebeu que ele tinha uma boa audição e gostava de escutar música, decidiu colocá-lo em uma escola de música, que instrumento Ryan deveria tocar?",
-        alternativa: [
+        enunciado: "Enunciado 03",
+        alternativas: [
             {
-            texto:"Flauta, pois é o instrumento favorito de Ryan, mas ele tem bastante dificuldade para tocar.",
-            afirmacao:""
+                texto: "alternativa 05",
+                afirmacao: "resultado 05"
             },
             {
-            texto:"",
-            afirmacao:""
+                texto: "alternativa 06",
+                afirmacao: "resultado 06"
             }
         ]
     },
     {
-        enunciado: "Com 19 anos, Ryan conheceu Isadora, uma garota muito bondoza que cuidava de crianças autistas, Ryan queria chamâ-la para sair, mas seus amigos disseram que não uma boa ideia, o que Ryan deve fazer?",
-        alternativa: [
-                {
-                texto:"A3",
-                afirmacao:""
-                },
-                {
-                texto:"A3",
-                afirmacao:""
-                }
+        enunciado: "Enunciado 04",
+        alternativas: [
+            {
+                texto: "alternativa 07",
+                afirmacao: "resultado 07"
+            },
+            {
+                texto: "alternativa 08",
+                afirmacao: "resultado 08"
+            }
         ]
     },
     {
-        enunciado: "Pergunta 04",
-        alternativa: [
-                {
-                texto:"A4",
-                afirmacao:""
-                },
-                {
-                texto:"A4",
-                afirmacao:""
-                }
-        ]
-    },
-    {
-        enunciado: "Pergunta 05",
-        alternativa: [
-                {
-                texto:"A5",
-                afirmacao:""
-                },
-                {
-                texto:"A5",
-                afirmacao:""
-                }
+        enunciado: "Enunciado 05",
+        alternativas: [
+            {
+                texto: "alternativa 09",
+                afirmacao: "resultado 09"
+            },
+            {
+                texto: "alternativa 10",
+                afirmacao: "resultado 10"
+            }
         ]
     },
 ]
 
 let atual = 0;
 let perguntaAtual;
-let historiaFinal = " ";
+let historiaFinal = "";
 
 function mostrarPerguntas(){
     if(atual >= perguntas.length){
         mostraResultado();
-        return;
+        return
     }
     perguntaAtual = perguntas[atual];
     caixaPerguntas.textContent = perguntaAtual.enunciado;
-    caixaAlternativas.textContent = " ";
-    mostraAlternativas();
+    caixaAlternativas.textContent = ""
+    mostrarAlternativas();
 }
 
-function mostraAlternativas(){
-    for (const alternativa of perguntaAtual.alternativas){
+function mostrarAlternativas(){
+    for(const alternativa of perguntaAtual.alternativas){
         const botaoAlternativas = document.createElement("button");
         botaoAlternativas.textContent = alternativa.texto;
-        botaoAlternativas.addEventListener("click", () => respostaSelecionada(alternativa));
-        caixaAlternativas.appendChild(botaoAlternativas)
+        botaoAlternativas.addEventListener("click", () => respostaSelecionada(alternativa))
+        caixaAlternativas.appendChild(botaoAlternativas);
     }
-
 }
 
 function respostaSelecionada(opcaoSelecionada){
@@ -103,10 +103,10 @@ function respostaSelecionada(opcaoSelecionada){
     mostrarPerguntas();
 }
 
-function mostraResultado (){
-    caixaPerguntas.textContent = "Início do texto"
+function mostraResultado(){
+    caixaPerguntas.textContent = " Inicio do texto... "
     textoResultado.textContent = historiaFinal;
-    caixaAlternativas.textContent = " ";
+    caixaAlternativas.textContent = "";
 }
 
 mostrarPerguntas();
