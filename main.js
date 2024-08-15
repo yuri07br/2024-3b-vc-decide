@@ -6,14 +6,14 @@ const textoResultado = document.querySelector('.texto-resultado');
 
 const perguntas = [
     {
-        enunciado: "Enunciado 01",
+        enunciado: " Um jovem rapaz foi dar sua opiniao sobre a legalizaçao da maconha  e ele era a favor da maconha falou que se fosse legal existiria menos preconceito e tambem acabava com o trafico. voce e a favor da legalizaçao da maconha?",
         alternativas: [
             {
-                texto:"alternativa 01",
-                afirmacao: "resultado 01"
+                texto:"Sim eu sou a favor",
+                afirmacao: "concordo por que a maconha e igual cigarro se fosse legal não teria trafico."
             },
             {
-                texto:"alternativa 02",
+                texto:" Não eu sou contra",
                 afirmacao: "resultado 02"
             }   
         ]
